@@ -1,333 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Jaekwon Lee</title>
-<meta name="description" content="Jaekwon Lee, Assistant Professor at Hansung University, Department of Applied Artificial Intelligence.">
-<meta property="og:title" content="Jaekwon Lee">
-<meta property="og:description" content="Hansung University, Assistant Professor">
-<meta property="og:image" content="static/photo.jpg">
-<link rel="icon" href="static/favicon.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=STIX+Two+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-
-<style>
-  :root {
-    --paper: #FBFCFD;
-    --ink: #14213D;
-    --ink-soft: #4A5670;
-    --rule: #DDE4EA;
-    --wash: #F0F4F7;
-    --signal: #0E7C7B;
-    --accent: #E8A33D;
-    --serif: "STIX Two Text", "Times New Roman", Times, serif;
-    --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
-    --wide: 58rem;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #0F1729; --ink: #E9EEF5; --ink-soft: #9FACC2;
-      --rule: #27334A; --wash: #17223A; --signal: #4FC4C1; --accent: #F0B75E;
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaekwon Lee | Hansung University</title>
+  <meta name="description" content="Jaekwon Lee, Assistant Professor, Department of Applied Artificial Intelligence, College of Creativity and Convergence, Hansung University.">
+  <meta property="og:title" content="Jaekwon Lee | Hansung University">
+  <meta property="og:description" content="Assistant Professor, Department of Applied Artificial Intelligence, Hansung University.">
+  <meta property="og:image" content="./static/photo.jpg">
+  <style>
+    :root { color-scheme: light; --text: #222; --muted: #595959; --link: #175a9a; --line: #ddd; }
+    * { box-sizing: border-box; }
+    html { scroll-padding-top: 1.5rem; }
+    body { margin: 0; background: #fff; color: var(--text); font: 16px/1.7 Arial, Helvetica, sans-serif; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
+    .container { max-width: 980px; margin: 0 auto; padding: 0 32px; }
+    .skip { position: absolute; top: -100px; left: 1rem; padding: .5rem; background: white; }
+    .skip:focus { top: .5rem; }
+    nav { border-bottom: 1px solid var(--line); padding: 22px 0; }
+    nav ul, .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; padding: 0; margin: 0; }
+    nav a { color: var(--muted); font-size: 15px; }
+    .profile { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; padding: 48px 0 32px; }
+    h1 { font-size: clamp(30px, 5vw, 38px); line-height: 1.2; margin: 0 0 14px; font-weight: 700; letter-spacing: -.7px; }
+    .position { margin: 0 0 3px; font-weight: 600; }
+    .affiliation { margin: 0; line-height: 1.6; max-width: 610px; }
+    .affiliation strong { font-weight: 600; }
+    .contact { margin-top: 16px; gap: 6px 18px; font-size: 15px; }
+    .portrait { display: block; width: 180px; height: auto; border-radius: 3px; }
+    section { margin-top: 32px; }
+    h2 { margin: 0 0 16px; padding-bottom: 7px; border-bottom: 1px solid var(--line); font-size: 23px; line-height: 1.4; font-weight: 600; }
+    p { margin: 0 0 14px; }
+    .news { padding: 0; margin: 0; list-style: none; }
+    .news li { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; margin-bottom: 10px; }
+    time { color: var(--muted); font-size: 14px; padding-top: 2px; }
+    details { margin-top: 12px; }
+    summary { cursor: pointer; color: var(--link); margin-bottom: 12px; }
+    .publications { margin: 0; padding-left: 23px; }
+    .publications > li { padding-left: 5px; margin-bottom: 25px; }
+    .publications h3 { font-size: 16px; line-height: 1.5; margin: 0 0 4px; font-weight: 600; }
+    .publications p { margin: 0 0 3px; }
+    .authors { color: var(--muted); font-size: 15px; }
+    .venue { font-style: italic; font-size: 15px; }
+    .award { font-size: 14px; color: #855017; }
+    .resource-links { font-size: 14px; display: flex; flex-wrap: wrap; gap: 14px; }
+    .list { padding-left: 22px; margin: 0; }
+    .list li { margin-bottom: 10px; }
+    .honors { margin: 0; }
+    .honors dt { font-weight: 600; margin-top: 14px; }
+    .honors dd { margin: 2px 0 0; color: var(--muted); }
+    footer { margin-top: 48px; padding: 20px 0 30px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    @media (max-width: 640px) {
+      .container { padding: 0 20px; }
+      nav { padding: 16px 0; }
+      nav ul { gap: 8px 18px; }
+      .profile { grid-template-columns: minmax(0, 1fr) 110px; gap: 20px; padding-top: 30px; }
+      .portrait { width: 110px; }
+      .affiliation { font-size: 14px; }
     }
-  }
-
-  *, *::before, *::after { box-sizing: border-box; }
-  html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
-  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-  body {
-    margin: 0; background: var(--paper); color: var(--ink);
-    font-family: var(--sans); font-size: 1.05rem; line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-  }
-  img { max-width: 100%; display: block; }
-  a { color: var(--signal); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
-  a:focus-visible, button:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
-  .wrap { width: min(100% - 2.5rem, var(--wide)); margin-inline: auto; }
-
-  /* ---------- Nav ---------- */
-  .nav {
-    position: sticky; top: 0; z-index: 10;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
-    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--rule);
-    font-family: var(--sans); font-size: 0.95rem;
-  }
-  .nav .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: 3.5rem; }
-  .brand { font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: -0.01em; }
-  .nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 1.4rem; }
-  .nav ul a { color: var(--ink-soft); text-decoration: none; font-weight: 500; }
-  .nav ul a:hover { color: var(--signal); }
-  @media (max-width: 40rem) { .nav ul { gap: 0.9rem; font-size: 0.88rem; } }
-
-  /* ---------- Hero / About ---------- */
-  .hero { display: grid; grid-template-columns: 15rem 1fr; gap: 2.75rem; align-items: start; padding: 4rem 0 1rem; }
-  .hero img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 14px; }
-  .photo-slot {
-    aspect-ratio: 4 / 5; border: 1.5px dashed var(--rule); border-radius: 14px; background: var(--wash);
-    display: grid; place-items: center; font-family: ui-monospace, monospace; font-size: 0.8rem; color: var(--ink-soft);
-  }
-  h1 { font-weight: 600; font-size: clamp(2rem, 4.5vw, 2.7rem); line-height: 1.15; margin: 0 0 0.35rem; letter-spacing: -0.01em; }
-  .role { font-family: var(--sans); color: var(--ink-soft); margin: 0 0 1.5rem; font-size: 1rem; }
-  .hero p { margin: 0 0 1.15rem; }
-  .hero > div { min-width: 0; }
-  .hero .role { margin-bottom: 1.8rem; line-height: 1.65; }
-  .role span, .role strong { display: block; }
-  .role .position { color: var(--ink); font-weight: 500; margin: 0.65rem 0 0.45rem; }
-  .role strong { color: var(--ink); font-weight: 600; margin-top: 0.35rem; }
-  .hero p a { color: var(--ink); text-decoration-color: var(--rule); }
-  .hero p a:hover { text-decoration-color: var(--signal); }
-  .buttons { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.5rem; padding: 0; list-style: none; }
-  .buttons a {
-    display: inline-block; font-family: var(--sans); font-size: 0.9rem; font-weight: 500;
-    text-decoration: none; color: var(--ink); border: 1px solid var(--rule); border-radius: 999px; padding: 0.42rem 1rem;
-  }
-  .buttons a:hover { border-color: var(--signal); color: var(--signal); }
-  @media (max-width: 44rem) {
-    .hero { grid-template-columns: 1fr; gap: 1.75rem; padding-top: 2.5rem; }
-    .hero img, .photo-slot { width: 11rem; aspect-ratio: 1; border-radius: 50%; }
-  }
-
-  /* ---------- Sections ---------- */
-  section { padding: 3.25rem 0 0; }
-  h2 {
-    font-family: var(--sans); font-weight: 600; font-size: 1.15rem; letter-spacing: 0;
-    color: var(--ink-soft); margin: 0 0 1.25rem; padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule);
-  }
-
-  /* News */
-  .news { list-style: none; margin: 0; padding: 0; font-size: 1.02rem; }
-  .news li { display: grid; grid-template-columns: 6.5rem 1fr; gap: 1rem; padding: 0.65rem 0; }
-  .news time { font-family: var(--sans); font-size: 0.9rem; font-weight: 500; color: var(--ink-soft); padding-top: 0.15rem; white-space: nowrap; }
-  #news .more { margin-top: 0.6rem; }
-  #news .more summary { cursor: pointer; font-family: var(--sans); font-size: 0.9rem; color: var(--signal); list-style: none; }
-  #news .more summary::-webkit-details-marker { display: none; }
-
-  /* Research */
-  .filter { display: flex; gap: 0.4rem; margin: -0.4rem 0 1.5rem; padding: 0; list-style: none; font-family: var(--sans); }
-  .filter button {
-    font: inherit; font-size: 0.85rem; font-weight: 500; cursor: pointer;
-    color: var(--ink-soft); background: transparent; border: 1px solid var(--rule); border-radius: 999px; padding: 0.3rem 0.9rem;
-  }
-  .filter button[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink); }
-  .pubs { list-style: none; margin: 0; padding: 0; }
-  .pub { display: grid; grid-template-columns: 11rem 1fr; gap: 1.6rem; padding: 1.4rem 0; border-bottom: 1px solid var(--rule); }
-  .pub:last-child { border-bottom: 0; }
-  .pub[hidden] { display: none; }
-  .thumb { aspect-ratio: 16 / 10; border-radius: 10px; background: var(--wash); overflow: hidden; }
-  .thumb img { width: 100%; height: 100%; object-fit: cover; }
-  .thumb.slot { display: grid; place-items: center; border: 1.5px dashed var(--rule); font-family: ui-monospace, monospace; font-size: 0.75rem; color: var(--ink-soft); }
-  .pub h3 { font-family: var(--sans); font-weight: 600; font-size: 1.15rem; line-height: 1.5; margin: 0 0 0.3rem; }
-  .pub h3 a { color: var(--ink); text-decoration: none; }
-  .pub h3 a:hover { color: var(--signal); }
-  .pub .authors, .pub .venue { font-family: var(--sans); font-size: 0.92rem; margin: 0 0 0.25rem; }
-  .pub .authors { color: var(--ink-soft); }
-  .pub .authors b { color: var(--ink); font-weight: 600; }
-  .pub .venue { color: var(--ink); font-weight: 500; }
-  .pub .award { font-family: var(--sans); font-size: 0.88rem; color: var(--accent); font-weight: 600; margin: 0 0 0.25rem; }
-  .pub .links { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.6rem 0 0; padding: 0; list-style: none; }
-  .pub .links a {
-    font-family: var(--sans); font-size: 0.82rem; font-weight: 500; text-decoration: none; color: var(--ink-soft);
-    border: 1px solid var(--rule); border-radius: 6px; padding: 0.18rem 0.55rem;
-  }
-  .pub .links a:hover { color: var(--signal); border-color: var(--signal); }
-  @media (max-width: 40rem) { .pub { grid-template-columns: 1fr; gap: 0.9rem; } .thumb { max-width: 14rem; } }
-
-  /* Honors */
-  .honors { margin: 0; }
-  .honors dt { font-weight: 600; margin-top: 1.1rem; }
-  .honors dt:first-child { margin-top: 0; }
-  .honors dd { margin: 0.15rem 0 0; font-family: var(--sans); font-size: 0.95rem; color: var(--ink-soft); line-height: 1.5; }
-
-  /* Simple text lists (talks/service/teaching) */
-  .plain { padding-left: 1.2rem; margin: 0; }
-  .plain li { margin-bottom: 0.45rem; }
-  .plain li::marker { color: var(--signal); }
-
-  footer { margin-top: 4.5rem; padding: 2rem 0 3rem; border-top: 1px solid var(--rule); font-family: var(--sans); font-size: 0.88rem; color: var(--ink-soft); text-align: center; }
-  footer p { margin: 0.3rem 0; }
-  @media (max-width: 40rem) {
-    .nav .wrap { height: auto; min-height: 3.5rem; flex-wrap: wrap; padding-block: 0.75rem; }
-    .nav ul { flex-wrap: wrap; column-gap: 1rem; row-gap: 0.5rem; }
-    .news li { grid-template-columns: 5.5rem 1fr; gap: 0.65rem; }
-    html { scroll-padding-top: 7rem; }
-  }
-</style>
+    @media (max-width: 420px) {
+      .profile { grid-template-columns: 1fr; }
+      .portrait { width: 140px; }
+      .news li { grid-template-columns: 75px minmax(0, 1fr); gap: 10px; }
+    }
+    @media print { nav, .skip { display: none; } .container { max-width: none; } a { color: inherit; } }
+  </style>
 </head>
-
 <body>
-
-<nav class="nav" aria-label="Site">
-  <div class="wrap">
-    <a class="brand" href="#top">Jaekwon Lee</a>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#news">News</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#honors">Honors</a></li>
-      <li><a href="static/cv.pdf">CV</a></li>
-    </ul>
-  </div>
-</nav>
-
-<main id="top" class="wrap">
-
-  <!-- ===== About =====  Replace .photo-slot with: <img src="static/photo.jpg" alt="Jaekwon Lee"> -->
-  <header class="hero" id="about">
-    <div class="photo-slot">static/photo.jpg</div>
-    <div>
-      <h1>Jaekwon Lee</h1>
-      <p class="role">
-        <span class="position">Assistant Professor</span>
-        <span>Department of Applied Artificial Intelligence</span>
-        <span>College of Creativity and Convergence</span>
-        <strong>Hansung University</strong>
-      </p>
-      <p>[Paragraph 1: who you are, where you are, who you work with, and your research focus in one or two sentences.]</p>
-      <p>[Paragraph 2: two or three concrete research directions, or notable venues and awards.]</p>
-      <p>[Paragraph 3: previous positions, degrees, and advisors.]</p>
-      <p>[Optional: something outside research.]</p>
-
-      <ul class="buttons">
-        <li><a href="static/cv.pdf">CV</a></li>
-        <li><a href="mailto:[you@institution.ac.kr]">Email</a></li>
-        <li><a href="https://scholar.google.com/citations?user=[ID]">Google Scholar</a></li>
-        <li><a href="https://github.com/[user]">GitHub</a></li>
-        <li><a href="https://x.com/[handle]">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/[handle]">LinkedIn</a></li>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="container">
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#service">Service</a></li>
+        <li><a href="./static/cv.pdf">CV</a></li>
       </ul>
-    </div>
-  </header>
-
-  <!-- ===== News =====  Newest first. Move old items into the <details> block. -->
-  <section id="news">
-    <h2>News</h2>
-    <ul class="news">
-      <li><time datetime="2026-09">Sep. 2026</time><span>🩵 [Item — e.g. new preprint on ...]</span></li>
-      <li><time datetime="2026-06">Jun. 2026</time><span>✈️ [Attending ... @ City]</span></li>
-      <li><time datetime="2026-01">Jan. 2026</time><span>🌷 [Paper accepted at ...]</span></li>
-      <li><time datetime="2025-09">Sep. 2025</time><span>🏆 [Award ...]</span></li>
-    </ul>
-    <details class="more">
-      <summary>Older news</summary>
-      <ul class="news">
-        <li><time datetime="2025-03">Mar. 2025</time><span>[Older item]</span></li>
-      </ul>
-    </details>
-  </section>
-
-  <!-- ===== Research =====
-       Each <li class="pub"> gets data-selected="true" to appear under "Selected".
-       Replace .thumb.slot with:  <div class="thumb"><img src="static/pubs/[key].png" alt=""></div> -->
-  <section id="research">
-    <h2>Research</h2>
-    <ul class="filter" role="group" aria-label="Filter publications">
-      <li><button type="button" data-filter="selected" aria-pressed="true">Selected</button></li>
-      <li><button type="button" data-filter="all" aria-pressed="false">All</button></li>
-    </ul>
-
-    <ul class="pubs">
-      <li class="pub" data-selected="true">
-        <div class="thumb slot">static/pubs/[key].png</div>
+    </nav>
+    <main id="main">
+      <header class="profile">
         <div>
-          <h3><a href="[project page URL]">[Paper title]</a></h3>
-          <p class="authors"><b>Jaekwon Lee</b>, <a href="#">[Coauthor]</a>, <a href="#">[Coauthor]</a></p>
-          <p class="venue">[Venue Year]</p>
-          <p class="award">[Optional: Best Paper Award / Oral / Spotlight]</p>
-          <ul class="links">
-            <li><a href="#">Paper</a></li>
-            <li><a href="#">Website</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Video</a></li>
+          <h1>Jaekwon Lee</h1>
+          <p class="position">Assistant Professor</p>
+          <p class="affiliation">Department of Applied Artificial Intelligence, College of Creativity and Convergence, <strong>Hansung University</strong></p>
+          <ul class="contact" aria-label="Contact and profiles">
+            <li><a href="./static/cv.pdf">Curriculum Vitae</a></li>
+            <!-- Add verified profile links here, for example:
+            <li><a href="mailto:YOUR_EMAIL">Email</a></li>
+            <li><a href="YOUR_SCHOLAR_URL">Google Scholar</a></li>
+            <li><a href="YOUR_GITHUB_URL">GitHub</a></li>
+            -->
           </ul>
         </div>
-      </li>
-
-      <li class="pub" data-selected="true">
-        <div class="thumb slot">static/pubs/[key].png</div>
-        <div>
-          <h3><a href="#">[Paper title]</a></h3>
-          <p class="authors">[Coauthor]*, <b>Jaekwon Lee</b>*, [Coauthor] &nbsp;<span style="color:var(--ink-soft)">*Equal contribution</span></p>
-          <p class="venue">[Venue Year]</p>
-          <ul class="links">
-            <li><a href="#">Paper</a></li>
-            <li><a href="#">Code</a></li>
-          </ul>
-        </div>
-      </li>
-
-      <li class="pub">
-        <div class="thumb slot">static/pubs/[key].png</div>
-        <div>
-          <h3><a href="#">[Paper title — shown only under "All"]</a></h3>
-          <p class="authors"><b>Jaekwon Lee</b>, [Coauthor]</p>
-          <p class="venue">[Venue Year]</p>
-          <ul class="links">
-            <li><a href="#">Paper</a></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ===== Honors ===== -->
-  <section id="honors">
-    <h2>Honors &amp; Awards</h2>
-    <dl class="honors">
-      <dt>[Award name, Venue Year]</dt>
-      <dd>[One-line description or paper title.]</dd>
-      <dt>[Scholarship / Fellowship]</dt>
-      <dd>[Granting body, date.]</dd>
-      <dt>[Reviewer recognition]</dt>
-      <dd>[Venues.]</dd>
-    </dl>
-  </section>
-
-  <!-- ===== Optional sections — delete any you don't need, and add them to the nav if you keep them ===== -->
-  <section id="talks">
-    <h2>Talks</h2>
-    <ul class="plain">
-      <li>[Talk title] — [Host], [Month Year]</li>
-    </ul>
-  </section>
-
-  <section id="service">
-    <h2>Service</h2>
-    <ul class="plain">
-      <li>Reviewer: [Venue Year], [Venue Year]</li>
-      <li>[Teaching / organizing role]</li>
-    </ul>
-  </section>
-
-</main>
-
-<footer>
-  <div class="wrap">
-    <p>© 2026 Jaekwon Lee. Last updated [Month Year].</p>
+        <!-- This path is relative to index.html. Match the actual filename and extension exactly. -->
+        <img class="portrait" src="./static/photo.jpg" alt="Portrait of Jaekwon Lee" decoding="async">
+      </header>
+      <section id="about" aria-labelledby="about-title">
+        <h2 id="about-title">About</h2>
+        <p>I am an Assistant Professor in the Department of Applied Artificial Intelligence, College of Creativity and Convergence, at Hansung University.</p>
+        <!-- Replace the bracketed text with your biography. -->
+        <p>[Briefly describe your research interests and current work.]</p>
+        <p>[Previous positions, education, and advisors.]</p>
+      </section>
+      <section id="news" aria-labelledby="news-title">
+        <h2 id="news-title">News</h2>
+        <ul class="news">
+          <li><time datetime="2026-09">Sep. 2026</time><span>[Latest news or announcement.]</span></li>
+          <li><time datetime="2026-06">Jun. 2026</time><span>[Conference attendance or research update.]</span></li>
+          <li><time datetime="2026-01">Jan. 2026</time><span>[Paper acceptance or other news.]</span></li>
+          <li><time datetime="2025-09">Sep. 2025</time><span>[Award or other news.]</span></li>
+        </ul>
+        <details>
+          <summary>Older news</summary>
+          <ul class="news"><li><time datetime="2025-03">Mar. 2025</time><span>[Older news.]</span></li></ul>
+        </details>
+      </section>
+      <section id="publications" aria-labelledby="publications-title">
+        <h2 id="publications-title">Publications</h2>
+        <!-- Add real paper links below each entry when available.
+        <p class="resource-links"><a href="PAPER_URL">Paper</a><a href="CODE_URL">Code</a></p>
+        -->
+        <ol class="publications">
+          <li>
+            <h3>[Paper title]</h3>
+            <p class="authors"><strong>Jaekwon Lee</strong>, [Coauthor], [Coauthor]</p>
+            <p class="venue">[Venue, Year]</p>
+            <p class="award">[Optional: Best Paper Award / Oral / Spotlight]</p>
+          </li>
+          <li>
+            <h3>[Paper title]</h3>
+            <p class="authors">[Coauthor]*, <strong>Jaekwon Lee</strong>*, [Coauthor]</p>
+            <p class="venue">[Venue, Year]</p>
+            <p class="authors">*Equal contribution</p>
+          </li>
+          <li>
+            <h3>[Paper title]</h3>
+            <p class="authors"><strong>Jaekwon Lee</strong>, [Coauthor]</p>
+            <p class="venue">[Venue, Year]</p>
+          </li>
+        </ol>
+      </section>
+      <section id="honors" aria-labelledby="honors-title">
+        <h2 id="honors-title">Honors &amp; Awards</h2>
+        <dl class="honors">
+          <dt>[Award name, Year]</dt><dd>[Granting organization or description.]</dd>
+          <dt>[Scholarship / Fellowship]</dt><dd>[Granting organization, Year.]</dd>
+          <dt>[Reviewer recognition]</dt><dd>[Venue, Year.]</dd>
+        </dl>
+      </section>
+      <section id="talks" aria-labelledby="talks-title">
+        <h2 id="talks-title">Talks</h2>
+        <ul class="list"><li>[Talk title] — [Host], [Month Year]</li></ul>
+      </section>
+      <section id="service" aria-labelledby="service-title">
+        <h2 id="service-title">Service</h2>
+        <ul class="list">
+          <li>Reviewer: [Venue Year], [Venue Year]</li>
+          <li>[Teaching / organizing role]</li>
+        </ul>
+      </section>
+    </main>
+    <footer>© 2026 Jaekwon Lee · Hansung University</footer>
   </div>
-</footer>
-
-<script>
-  (function () {
-    var buttons = document.querySelectorAll('.filter button');
-    var pubs = document.querySelectorAll('.pub');
-    function apply(mode) {
-      pubs.forEach(function (p) {
-        p.hidden = (mode === 'selected') && p.dataset.selected !== 'true';
-      });
-      buttons.forEach(function (b) {
-        b.setAttribute('aria-pressed', String(b.dataset.filter === mode));
-      });
-    }
-    buttons.forEach(function (b) {
-      b.addEventListener('click', function () { apply(b.dataset.filter); });
-    });
-    apply('selected');
-  })();
-</script>
-
 </body>
 </html>
