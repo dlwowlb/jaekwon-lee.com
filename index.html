@@ -3,72 +3,366 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Jaekwon Lee | Hansung University</title>
   <meta name="description" content="Jaekwon Lee, Assistant Professor, Department of Applied Artificial Intelligence, College of Creativity and Convergence, Hansung University.">
   <meta property="og:title" content="Jaekwon Lee | Hansung University">
   <meta property="og:description" content="Assistant Professor, Department of Applied Artificial Intelligence, Hansung University.">
   <meta property="og:image" content="./static/photo.jpg">
+
   <style>
-    :root { color-scheme: light; --text: #222; --muted: #595959; --link: #175a9a; --line: #ddd; }
-    * { box-sizing: border-box; }
-    html { scroll-padding-top: 1.5rem; }
-    body { margin: 0; background: #fff; color: var(--text); font: 16px/1.7 Arial, Helvetica, sans-serif; }
-    a { color: var(--link); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; }
-    .container { max-width: 980px; margin: 0 auto; padding: 0 32px; }
-    .skip { position: absolute; top: -100px; left: 1rem; padding: .5rem; background: white; }
-    .skip:focus { top: .5rem; }
-    nav { border-bottom: 1px solid var(--line); padding: 22px 0; }
-    nav ul, .contact { display: flex; flex-wrap: wrap; gap: 8px 24px; list-style: none; padding: 0; margin: 0; }
-    nav a { color: var(--muted); font-size: 15px; }
-    .profile { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 40px; align-items: start; padding: 48px 0 32px; }
-    h1 { font-size: clamp(30px, 5vw, 38px); line-height: 1.2; margin: 0 0 14px; font-weight: 700; letter-spacing: -.7px; }
-    .position { margin: 0 0 3px; font-weight: 600; }
-    .affiliation { margin: 0; line-height: 1.6; max-width: 610px; }
-    .affiliation strong { font-weight: 600; }
-    .contact { margin-top: 16px; gap: 6px 18px; font-size: 15px; }
-    .portrait { display: block; width: 180px; height: auto; border-radius: 3px; }
-    section { margin-top: 32px; }
-    h2 { margin: 0 0 16px; padding-bottom: 7px; border-bottom: 1px solid var(--line); font-size: 23px; line-height: 1.4; font-weight: 600; }
-    p { margin: 0 0 14px; }
-    .news { padding: 0; margin: 0; list-style: none; }
-    .news li { display: grid; grid-template-columns: 90px minmax(0, 1fr); gap: 16px; margin-bottom: 10px; }
-    time { color: var(--muted); font-size: 14px; padding-top: 2px; }
-    details { margin-top: 12px; }
-    summary { cursor: pointer; color: var(--link); margin-bottom: 12px; }
-    .publications { margin: 0; padding-left: 23px; }
-    .publications > li { padding-left: 5px; margin-bottom: 25px; }
-    .publications h3 { font-size: 16px; line-height: 1.5; margin: 0 0 4px; font-weight: 600; }
-    .publications p { margin: 0 0 3px; }
-    .authors { color: var(--muted); font-size: 15px; }
-    .venue { font-style: italic; font-size: 15px; }
-    .award { font-size: 14px; color: #855017; }
-    .resource-links { font-size: 14px; display: flex; flex-wrap: wrap; gap: 14px; }
-    .list { padding-left: 22px; margin: 0; }
-    .list li { margin-bottom: 10px; }
-    .honors { margin: 0; }
-    .honors dt { font-weight: 600; margin-top: 14px; }
-    .honors dd { margin: 2px 0 0; color: var(--muted); }
-    footer { margin-top: 48px; padding: 20px 0 30px; border-top: 1px solid var(--line); font-size: 13px; color: var(--muted); }
+    :root {
+      color-scheme: light;
+      --text: #222;
+      --muted: #595959;
+      --link: #175a9a;
+      --line: #ddd;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-padding-top: 1.5rem;
+    }
+
+    body {
+      margin: 0;
+      background: #fff;
+      color: var(--text);
+      font: 16px/1.7 Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    a:focus-visible,
+    summary:focus-visible {
+      outline: 2px solid var(--link);
+      outline-offset: 4px;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .skip {
+      position: absolute;
+      top: -100px;
+      left: 1rem;
+      padding: 0.5rem;
+      background: white;
+    }
+
+    .skip:focus {
+      top: 0.5rem;
+    }
+
+    nav {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0;
+    }
+
+    nav ul,
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 24px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 180px;
+      gap: 40px;
+      align-items: start;
+      padding: 48px 0 32px;
+    }
+
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 5vw, 38px);
+      line-height: 1.2;
+      font-weight: 700;
+      letter-spacing: -0.7px;
+    }
+
+    .position {
+      margin: 0 0 3px;
+      font-weight: 600;
+    }
+
+    .affiliation {
+      max-width: 610px;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 16px;
+      gap: 6px 18px;
+      font-size: 15px;
+    }
+
+    .portrait {
+      display: block;
+      width: 180px;
+      height: auto;
+      border-radius: 3px;
+    }
+
+    section {
+      margin-top: 32px;
+    }
+
+    h2 {
+      margin: 0 0 16px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line);
+      font-size: 23px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 14px;
+    }
+
+    .news {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .news li {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr);
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    time {
+      color: var(--muted);
+      font-size: 14px;
+      padding-top: 2px;
+    }
+
+    details {
+      margin-top: 12px;
+    }
+
+    summary {
+      cursor: pointer;
+      color: var(--link);
+      margin-bottom: 12px;
+    }
+
+    /* Publications */
+    .publications {
+      margin: 0;
+      padding-left: 23px;
+    }
+
+    .publications > li {
+      padding-left: 5px;
+      margin-bottom: 28px;
+    }
+
+    .publications > li::marker {
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    .publications h3 {
+      margin: 0 0 7px;
+      color: #1e293b;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: -0.2px;
+    }
+
+    .publications p {
+      margin: 0 0 3px;
+    }
+
+    .publications .authors {
+      color: #64748b;
+      font-size: 15px;
+    }
+
+    .publications .authors strong {
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .publications .venue {
+      margin-top: 5px;
+      color: var(--link);
+      font-size: 14px;
+      font-weight: 600;
+      font-style: normal;
+    }
+
+    .publications .award {
+      font-size: 14px;
+      color: #855017;
+    }
+
+    .paper-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .paper-buttons .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border: 1px solid #dce4ed;
+      border-radius: 6px;
+      background: #f8fafc;
+      color: #375777;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.6;
+      text-decoration: none;
+      transition: background-color 0.15s, border-color 0.15s;
+    }
+
+    .paper-buttons .btn:hover {
+      background: #edf4fb;
+      border-color: #9eb9d3;
+    }
+
+    .paper-buttons .btn span {
+      color: #64748b;
+      font-size: 12px;
+    }
+
+    .resource-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 14px;
+    }
+
+    .list {
+      padding-left: 22px;
+      margin: 0;
+    }
+
+    .list li {
+      margin-bottom: 10px;
+    }
+
+    .honors {
+      margin: 0;
+    }
+
+    .honors dt {
+      font-weight: 600;
+      margin-top: 14px;
+    }
+
+    .honors dd {
+      margin: 2px 0 0;
+      color: var(--muted);
+    }
+
+    footer {
+      margin-top: 48px;
+      padding: 20px 0 30px;
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
     @media (max-width: 640px) {
-      .container { padding: 0 20px; }
-      nav { padding: 16px 0; }
-      nav ul { gap: 8px 18px; }
-      .profile { grid-template-columns: minmax(0, 1fr) 110px; gap: 20px; padding-top: 30px; }
-      .portrait { width: 110px; }
-      .affiliation { font-size: 14px; }
+      .container {
+        padding: 0 20px;
+      }
+
+      nav {
+        padding: 16px 0;
+      }
+
+      nav ul {
+        gap: 8px 18px;
+      }
+
+      .profile {
+        grid-template-columns: minmax(0, 1fr) 110px;
+        gap: 20px;
+        padding-top: 30px;
+      }
+
+      .portrait {
+        width: 110px;
+      }
+
+      .affiliation {
+        font-size: 14px;
+      }
+
+      .publications h3 {
+        font-size: 16px;
+      }
     }
+
     @media (max-width: 420px) {
-      .profile { grid-template-columns: 1fr; }
-      .portrait { width: 140px; }
-      .news li { grid-template-columns: 75px minmax(0, 1fr); gap: 10px; }
+      .profile {
+        grid-template-columns: 1fr;
+      }
+
+      .portrait {
+        width: 140px;
+      }
+
+      .news li {
+        grid-template-columns: 75px minmax(0, 1fr);
+        gap: 10px;
+      }
     }
-    @media print { nav, .skip { display: none; } .container { max-width: none; } a { color: inherit; } }
+
+    @media print {
+      nav,
+      .skip {
+        display: none;
+      }
+
+      .container {
+        max-width: none;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
   </style>
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
   <div class="container">
     <nav aria-label="Main navigation">
       <ul>
@@ -80,86 +374,141 @@
         <li><a href="./static/cv.pdf">CV</a></li>
       </ul>
     </nav>
+
     <main id="main">
       <header class="profile">
         <div>
           <h1>Jaekwon Lee</h1>
           <p class="position">Assistant Professor</p>
+
           <p class="affiliation">
-  Department of Applied Artificial Intelligence,<br>
-  College of Creativity and Convergence, Hansung University
-</p>
+            Department of Applied Artificial Intelligence,<br>
+            College of Creativity and Convergence, Hansung University
+          </p>
+
           <ul class="contact" aria-label="Contact and profiles">
             <li><a href="./static/cv.pdf">Curriculum Vitae</a></li>
             <li><a href="mailto:YOUR_EMAIL">Email</a></li>
             <li><a href="YOUR_SCHOLAR_URL">Google Scholar</a></li>
             <li><a href="YOUR_GITHUB_URL">GitHub</a></li>
-            
           </ul>
         </div>
-        <!-- This path is relative to index.html. Match the actual filename and extension exactly. -->
-        <img class="portrait" src="./static/photo.jpg" alt="Portrait of Jaekwon Lee" decoding="async">
+
+        <!-- index.html과 같은 위치의 static 폴더에 photo.jpg를 넣으세요. -->
+        <img
+          class="portrait"
+          src="./static/photo.jpg"
+          alt="Portrait of Jaekwon Lee"
+          decoding="async"
+        >
       </header>
+
       <section id="about" aria-labelledby="about-title">
         <h2 id="about-title">About</h2>
-        <p>I am an Assistant Professor in the Department of Applied Artificial Intelligence, College of Creativity and Convergence, at Hansung University.</p>
-        <!-- Replace the bracketed text with your biography. -->
-
+        <p>
+          I am an Assistant Professor in the Department of Applied Artificial
+          Intelligence, College of Creativity and Convergence, at Hansung University.
+        </p>
       </section>
+
       <section id="news" aria-labelledby="news-title">
         <h2 id="news-title">News</h2>
+
         <ul class="news">
-          <li><time datetime="2026-09">Sep. 2026</time><span>Paper accepted to NeurIPS '26 </span></li>
+          <li>
+            <time datetime="2026-09">Sep. 2026</time>
+            <span>Paper accepted to NeurIPS '26.</span>
+          </li>
         </ul>
+
         <details>
           <summary>Older news</summary>
-          <ul class="news"><li><time datetime="2025-03">Mar. 2025</time><span>[Older news.]</span></li></ul>
+          <ul class="news">
+            <li>
+              <time datetime="2025-03">Mar. 2025</time>
+              <span>[Older news.]</span>
+            </li>
+          </ul>
         </details>
       </section>
+
       <section id="publications" aria-labelledby="publications-title">
         <h2 id="publications-title">Publications</h2>
-        <!-- Add real paper links below each entry when available.
-        <p class="resource-links"><a href="PAPER_URL">Paper</a><a href="CODE_URL">Code</a></p>
-        -->
+
         <ol class="publications">
           <li>
-            <h3>HIRaD: Hidden Interaction Inference from Predictive Radar Dynamics</h3>
-            <p class="authors"><strong>Jaekwon Lee</strong> and Jaekoo Lee</p>
-            <p class="venue">NeurIPS 2026</p>
-            <!-- <p class="award">[Optional: Best Paper Award / Oral / Spotlight]</p> -->
-          
+            <h3>
+              HIRaD: Hidden Interaction Inference from Predictive Radar Dynamics
+            </h3>
 
-           <!-- 링크 추가 부분 (버튼 스타일용) -->
+            <p class="authors">
+              <strong>Jaekwon Lee</strong> and Jaekoo Lee
+            </p>
+
+            <p class="venue">NeurIPS 2026</p>
+
+            <!-- 수상 내역이 있는 경우 사용하세요.
+            <p class="award">Best Paper Award / Oral / Spotlight</p>
+            -->
+
             <div class="paper-buttons">
-              <a href="패스/to/your/document.pdf" target="_blank" class="btn">PDF</a>
-              <a href="https://github.com" target="_blank" class="btn">Webpage Code</a>
+              <!-- 실제 PDF 경로로 변경하세요. -->
+              <a
+                href="패스/to/your/document.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                PDF <span aria-hidden="true">↗</span>
+              </a>
+
+              <!-- 실제 프로젝트 또는 코드 주소로 변경하세요. -->
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn"
+              >
+                Webpage / Code <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </li>
-
-
         </ol>
       </section>
+
       <section id="honors" aria-labelledby="honors-title">
         <h2 id="honors-title">Honors &amp; Awards</h2>
-        <dl class="honors">
-          <dt>[Award name, Year]</dt><dd>[Granting organization or description.]</dd>
-          <dt>[Scholarship / Fellowship]</dt><dd>[Granting organization, Year.]</dd>
 
+        <dl class="honors">
+          <dt>[Award name, Year]</dt>
+          <dd>[Granting organization or description.]</dd>
+
+          <dt>[Scholarship / Fellowship]</dt>
+          <dd>[Granting organization, Year.]</dd>
         </dl>
       </section>
+
       <section id="talks" aria-labelledby="talks-title">
         <h2 id="talks-title">Talks</h2>
-        <ul class="list"><li>[Talk title] — [Host], [Month Year]</li></ul>
+
+        <ul class="list">
+          <li>[Talk title] — [Host], [Month Year]</li>
+        </ul>
       </section>
+
       <section id="service" aria-labelledby="service-title">
         <h2 id="service-title">Service</h2>
+
         <ul class="list">
           <li>Reviewer: [Venue Year], [Venue Year]</li>
           <li>[Teaching / organizing role]</li>
         </ul>
       </section>
     </main>
-    <footer>© 2026 Jaekwon Lee · Hansung University</footer>
+
+    <footer>
+      © 2026 Jaekwon Lee · Hansung University
+    </footer>
   </div>
 </body>
 </html>
