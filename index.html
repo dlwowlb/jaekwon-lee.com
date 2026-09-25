@@ -120,6 +120,14 @@
       font-size: 15px;
     }
 
+    .paper-buttons .btn {
+      width: 36px;
+      height: 36px;
+      padding: 0;
+      justify-content: center;
+    }
+
+    
     .portrait {
       display: block;
       width: 180px;
@@ -456,26 +464,43 @@
             -->
 
             <div class="paper-buttons">
-              <!-- 실제 PDF 경로로 변경하세요. -->
-              <a
-                href="패스/to/your/document.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-              >
-                PDF <span aria-hidden="true"></span>
-              </a>
+  <a
+    href="패스/to/your/document.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn"
+    aria-label="Paper PDF (opens in a new tab)"
+    title="PDF"
+  >
+    <svg width="19" height="19" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="1.7"
+         stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true" focusable="false">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <path d="M14 2v6h6"/>
+      <path d="M8 13h8M8 17h6"/>
+    </svg>
+  </a>
 
-              <!-- 실제 프로젝트 또는 코드 주소로 변경하세요. -->
-              <a
-                href="https://dlwowlb.github.io/HIRaD/"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn"
-              >
-                Webpage <span aria-hidden="true"></span>
-              </a>
-            </div>
+  <a
+    href="https://dlwowlb.github.io/HIRaD/"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn"
+    aria-label="Project webpage (opens in a new tab)"
+    title="Webpage"
+  >
+    <svg width="19" height="19" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="1.7"
+         stroke-linecap="round" stroke-linejoin="round"
+         aria-hidden="true" focusable="false">
+      <circle cx="12" cy="12" r="9"/>
+      <ellipse cx="12" cy="12" rx="4" ry="9"/>
+      <path d="M3 12h18"/>
+    </svg>
+  </a>
+</div>
+            
           </li>
         </ol>
       </section>
